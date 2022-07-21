@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace MusicCollection.Models
 {
   public class Record
