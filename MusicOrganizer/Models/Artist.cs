@@ -1,10 +1,10 @@
-using System.Collection.Generic;
+using System.Collections.Generic;
 
 namespace MusicCollection.Models
 {
   public class Artist
   {
-    private static List<Category> _instances = new List<Category> {};
+    private static List<Artist> _instances = new List<Artist> {};
     public string ArtistName { get; set; }
     public int Id {get; }
     public List<Record> Records { get; set; }
@@ -19,7 +19,7 @@ namespace MusicCollection.Models
 
     public static void ClearAll()
     {
-      return _instances;
+      _instances.Clear();
     }
 
     public static List<Artist> GetAll()
@@ -32,7 +32,7 @@ namespace MusicCollection.Models
       return _instances[searchId-1];
     }
 
-    public AddRecord(Record record)
+    public void AddRecord(Record record)
     {
       Records.Add(record);
     }

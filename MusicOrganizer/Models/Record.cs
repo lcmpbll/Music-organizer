@@ -8,7 +8,7 @@ namespace MusicCollection.Models
     public int Id { get; }
     private static List<Record> _instances = new List<Record> {};
 
-    public Record(string Title)
+    public Record(string title)
     {
       Title = title;
       _instances.Add(this);

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MusicCollection.Models;
+using System.Collections.Generic;
 
 namespace MusicCollection.Controllers
 {
@@ -12,14 +13,14 @@ namespace MusicCollection.Controllers
       return View(artist);
     }
 
-    [HttpPost("/items/delete")]
+    [HttpPost("/records/delete")]
     public ActionResult DeleteAll()
     {
       Record.ClearAll();
       return View();
     }
 
-    [HttpGet("/artists/{artistId}/records/{itemId}")]
+    [HttpGet("/artists/{artistId}/records/{recordId}")]
     public ActionResult Show(int artistId, int recordId)
     {
       Record record = Record.Find(recordId);
